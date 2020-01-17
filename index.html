@@ -2,25 +2,7 @@
 	<head>
 		<title>Brick Breaker</title>
 		<meta charset="UTF-8" />
-		<style>
-			#gameScreen {
-				border: 1px solid black;
-			}
-			img {
-				display: none;
-			}
-			body {
-				background-image: url(./assets/images/background.png);
-				background-repeat: no-repeat;
-				background-position: center;
-				background-color: #303030;
-				position: absolute;
-			}
-			canvas {
-				margin: 65 0 0 325;
-				position: absolute; 
-			}
-		</style>
+		<link rel="stylesheet" href="./style.css">
 	</head>
 	<body>	
 		<img id="img_ball" src="assets/images/ball.png">	
@@ -32,7 +14,16 @@
 		<img id="start" src="assets/images/start.png">
 		<img id="paused" src="assets/images/pause.png">
 
-		<canvas id="gameScreen" width="1000" height="680"></canvas>
+		<div id="bg">
+			<img src="./assets/images/background.png"  alt="">
+			<canvas id="gameScreen" width="1000" height="680"></canvas>
+		</div>
+		
+		<div class="buttons" style="text-align:center;">
+			<button id="btn1"><</button>
+			<button id="startBtn">Start</button>
+			<button id="btn2">></button>
+		</div>
 
 		<script src="./index.js"></script>
 	</body>

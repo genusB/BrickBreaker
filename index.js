@@ -1,4 +1,5 @@
 
+
  const level1 = [
   [0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1],
   [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0],
@@ -37,7 +38,7 @@ class Paddle {
     this.width = 150;
     this.height = 20;
 
-    this.maxSpeed = 7;
+    this.maxSpeed = 5;
     this.speed = 0;
 
     this.position = {
@@ -77,6 +78,7 @@ class Paddle {
 
 class InputHandler {
   constructor(paddle, game) {
+
     document.addEventListener("keydown", event => {
       switch (event.keyCode) {
         case 37:
@@ -96,17 +98,17 @@ class InputHandler {
           break;
       }
     });
-
-    document.addEventListener("keyup", event => {
-      switch (event.keyCode) {
-        case 37:
-          if (paddle.speed < 0) paddle.stop();
-          break;
-
-        case 39:
-          if (paddle.speed > 0) paddle.stop();
-          break;
+    document.getElementById("btn1").addEventListener("click", function() {paddle.moveLeft()});
+    document.getElementById("btn2").addEventListener("click", function() {paddle.moveRight()});
+    document.getElementById("startBtn").addEventListener("click", function() {
+      if(this.innerText == "PAUSE") {
+        game.togglePause();
       }
+      if(this.innerText == "START") {
+        game.start();
+        this.innerText = "Pause";
+      }
+
     });
   }
 }
@@ -273,7 +275,7 @@ function buildLevel(game, level) {
       this.gamestate !== GAMESTATE.NEWLEVEL
     )
       return;
-
+      
     this.bricks = buildLevel(this, this.levels[this.currentLevel]);
     this.ball.reset();
     this.gameObjects = [this.ball, this.paddle];
@@ -298,6 +300,9 @@ function buildLevel(game, level) {
       }
       else {
         this.currentLevel++;
+        this.ball.speed.x++;
+        this.ball.speed.y++;
+        this.paddle.maxSpeed
         this.gamestate = GAMESTATE.NEWLEVEL;
         this.start();
       }
@@ -331,6 +336,7 @@ function buildLevel(game, level) {
 
       this.image = document.getElementById("start");
       ctx.drawImage(this.image, 0, 0, this.gameWidth, this.gameHeight);
+      
     }
     if (this.gamestate === GAMESTATE.GAMEOVER) {
 

@@ -1,0 +1,67 @@
+#gameScreen {
+    margin-top: -57%;
+    margin-left: 27%;
+    width: 82%;
+}
+img {
+    display: none;
+}
+
+#bg img {
+    display: block;
+    margin-left: 10%;
+    margin-right: auto;
+    
+}
+body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+    background-color: #303030;
+    position: absolute;
+}
+
+.buttons button{
+    color: #ffffff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: none;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    visibility: hidden;
+  }
+#btn1 {
+    visibility: hidden;
+}
+
+
+
+@media screen and (max-width: 1400px) and (orientation: landscape) {
+    #bg img {
+        width: 75%;
+    }
+    #gameScreen {
+        width: 63%;
+        margin-top: -43%;
+        margin-left: 22%;
+    }
+    #bg img  {
+        margin-left: 13%;
+    }
+    #gameScreen {
+        margin-left: 25%;
+    }
+    #btn1, #btn2,#startBtn {
+        visibility: visible;
+    }
+    #btn1,#start {
+        margin-right: 18%;
+    }
+    #btn2,#start {
+        margin-left: 18%;
+    }
+    
+
+}
