@@ -51,11 +51,11 @@ body {
 
 @media screen and (max-width: 1400px) and (orientation: landscape) {
     #bg img {
-        width: 75%;
+        width: 72%;
     }
     #gameScreen {
-        width: 63%;
-        margin-top: -43%;
+        width: 60%;
+        margin-top: -41%;
         margin-left: 22%;
     }
     #bg img  {
