@@ -5,24 +5,30 @@
 		<link rel="stylesheet" href="./style.css">
 	</head>
 	<body>	
-		<img id="img_ball" src="assets/images/ball.png">	
-		<img id="img_brick" src="assets/images/brick.png">
-		<img id="img_brick2" src="assets/images/brick2.png">
-		<img id="fired" src="assets/images/fired.png">	
-		<img id="promoted" src="assets/images/promoted.png">	
-		<img id="paddle" src="assets/images/paddle.png">
-		<img id="start" src="assets/images/start.png">
-		<img id="paused" src="assets/images/pause.png">
+		<div id="wrapper">
+			<img id="img_ball" src="assets/images/ball.png">	
+			<img id="img_brick" src="assets/images/brick.png">
+			<img id="img_brick2" src="assets/images/brick2.png">
+			<img id="fired" src="assets/images/fired.png">	
+			<img id="promoted" src="assets/images/promoted.png">	
+			<img id="paddle" src="assets/images/paddle.png">
+			<img id="start" src="assets/images/start.png">
+			<img id="paused" src="assets/images/pause.png">
 
-		<div id="bg">
-			<img src="./assets/images/background.png"  alt="">
-			<canvas id="gameScreen" width="1000" height="680"></canvas>
+			<div id="bg">
+				<img src="./assets/images/background.png"  alt="">
+				<canvas id="gameScreen" width="1000" height="680"></canvas>
+			</div>
+			
+			<div class="buttons" style="text-align:center;">
+				<button id="btn1"><</button>
+				<button id="startBtn">Start</button>
+				<button id="btn2">></button>
+			</div>
 		</div>
 		
-		<div class="buttons" style="text-align:center;">
-			<button id="btn1"><</button>
-			<button id="startBtn">Start</button>
-			<button id="btn2">></button>
+		<div id="warning-message">
+			Kali łaska, paviarnicie pryładu🔃
 		</div>
 
 		<script src="./index.js"></script>

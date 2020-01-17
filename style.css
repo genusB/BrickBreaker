@@ -35,8 +35,19 @@ body {
 #btn1 {
     visibility: hidden;
 }
+#warning-message { display:none; }
 
+@media only screen and (orientation: portrait) {
+    #warning-message { 
+        display:block;
+        font-size: 15vw;
+        color: white;
+        text-align: center;
+        margin-top: 30%;
+     }
+    #wrapper {display: none;}
 
+}
 
 @media screen and (max-width: 1400px) and (orientation: landscape) {
     #bg img {
